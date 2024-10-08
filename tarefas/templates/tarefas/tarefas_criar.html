@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criar tarefa</title>
+</head>
+<body>
+    <h2>Criar uma nova tarefa</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="nome" placeholder="Nome da tarefa">
+        <button type="submit">Criar</button>
+    </form>
+    <a href="{% url 'tarefa_listar' %}">Voltar para listagem</a>
+</body>
+</html>

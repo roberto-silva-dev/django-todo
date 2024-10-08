@@ -1,0 +1,10 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore bytecode-compiled and other Python cache files
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/

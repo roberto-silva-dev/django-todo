@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar tarefa</title>
+</head>
+<body>
+    <h2>Editar tarefa</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="nome" value="{{ tarefa.nome }}">
+        <input type="checkbox" name="pronta" {% if tarefa.pronta %}checked{% endif %}> Pronta
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="{% url 'tarefa_listar' %}">Voltar para listagem</a>
+</body>
+</html>
