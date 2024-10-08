@@ -8,3 +8,7 @@ __pycache__/
 *.pdb
 *.egg
 *.egg-info/
+
+
+tarefas/migrations
+todo/migrations
