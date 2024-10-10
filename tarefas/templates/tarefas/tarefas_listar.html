@@ -2,15 +2,33 @@
 <html>
 <head>
     <title>Listar tarefas</title>
+    <style>
+        .color-azul {
+            color: rgb(46, 120, 230);
+        }
+        #titulo2 {
+            color: blueviolet;
+        }
+        a {
+            color: red;
+        }
+        svg{
+            width: 50px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
 <body>
-    <h2>Lista de tarefas</h2>
+    <h2 class="color-azul">Lista de tarefas</h2>
+    <h2 id="titulo2">Lista de tarefas 2</h2>
     <ul>
         {% for tarefa in tarefas %}
-            <li>
+            <li class="color-azul">
                 ({% if tarefa.pronta %}Pronta{% else %}Pendente{% endif %}) {{ tarefa.nome }}
                 - 
-                <a href="{% url 'tarefa_editar' tarefa.id %}">Editar</a>
+                <a href="{% url 'tarefa_editar' tarefa.id %}">
+                    <i class="fa-solid fa-pen-to-square"></i> Editar   
+                </a>
                 -
                 <a href="{% url 'tarefa_deletar' tarefa.id %}">Deletar</a>
             </li>
