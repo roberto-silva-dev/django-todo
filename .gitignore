@@ -12,3 +12,7 @@ __pycache__/
 
 tarefas/migrations
 todo/migrations
+*.sqlite3
+.env
+*/.env
+./venv
