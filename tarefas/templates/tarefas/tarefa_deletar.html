@@ -2,13 +2,33 @@
 <html>
 <head>
     <title>Deletar tarefa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
 <body>
-    <h2>Tem certeza que deseja deletar "{{ tarefa.nome }}"?</h2>
-    <form method="POST">
-        {% csrf_token %}
-        <button type="submit">Sim, deletar</button>
-    </form>
-    <a href="{% url 'tarefa_listar' %}">Cancelar</a>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header bg-danger text-white">
+                        <h2 class="mb-0">Confirmar exclusão</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="lead">Tem certeza que deseja deletar "<strong>{{ tarefa.nome }}</strong>"?</p>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i> Sim, deletar
+                            </button>
+                            <a href="{% url 'tarefa_listar' %}" class="btn btn-secondary">
+                                <i class="fa-solid fa-times"></i> Cancelar
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -2,14 +2,36 @@
 <html>
 <head>
     <title>Criar tarefa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
 <body>
-    <h2>Criar uma nova tarefa</h2>
-    <form method="POST">
-        {% csrf_token %}
-        <input type="text" name="nome" placeholder="Nome da tarefa">
-        <button type="submit">Criar</button>
-    </form>
-    <a href="{% url 'tarefa_listar' %}">Voltar para listagem</a>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="mb-0">Criar uma nova tarefa</h2>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome da tarefa</label>
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome da tarefa" required>
+                            </div>
+                            <button type="submit" class="btn btn-success">
+                                <i class="fa-solid fa-save"></i> Criar
+                            </button>
+                            <a href="{% url 'tarefa_listar' %}" class="btn btn-secondary">
+                                <i class="fa-solid fa-arrow-left"></i> Voltar para listagem
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
