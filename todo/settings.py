@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-0$p%amn$f3kcpng*0p7&n&_x7q6zl6sz7-9w(f^$-w0jq^-8#9
 DEBUG = True
 
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[]) + [
-    '127.0.0.1', 'localhost', '*.robertosilva.dev',
+    '127.0.0.1', 'localhost', '.robertosilva.dev',
 ]
 
 

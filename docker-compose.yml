@@ -2,8 +2,6 @@ services:
   web:
     build: .
     env_file: todo/.env   # caminho para seu .env
-    #volumes:
-    #  - .:/app       # útil para desenvolvimento
     ports:
       - "8000:8000"  # expõe Gunicorn para o host
     restart: always
