@@ -10,8 +10,6 @@ __pycache__/
 *.egg-info/
 
 
-tarefas/migrations
-todo/migrations
 *.sqlite3
 .env
 */.env
