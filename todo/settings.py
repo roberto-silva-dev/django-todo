@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'todo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'data/db.sqlite3',
     }
 }
 
@@ -128,3 +128,14 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CORS_ALLOWED_ORIGINS = [
+    "http://204.216.131.87",
+    "https://tarefas.apps.robertosilva.dev",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://204.216.131.87",
+    "https://tarefas.apps.robertosilva.dev",
+]

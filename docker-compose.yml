@@ -5,5 +5,5 @@ services:
     ports:
       - "8000:8000"  # expõe Gunicorn para o host
     volumes:
-      - ./db.sqlite3:/app/db.sqlite3
+      - ./data:/app/data
     restart: always
