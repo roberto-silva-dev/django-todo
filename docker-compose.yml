@@ -4,4 +4,6 @@ services:
     env_file: todo/.env   # caminho para seu .env
     ports:
       - "8000:8000"  # expõe Gunicorn para o host
+    volumes:
+      - ./db.sqlite3:/app/db.sqlite3
     restart: always
